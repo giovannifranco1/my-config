@@ -1,276 +1,303 @@
 {
-  // "php.executablePath": "\"C:\\php8\\php.exe\"",
-  "php.executablePath": "php",
-  // "intelephense.diagnostics.undefinedTypes":false,
-  // "intelephense.diagnostics.undefinedFunctions":false,
-  // "intelephense.diagnostics.undefinedConstants":false,
-  // "intelephense.diagnostics.undefinedClassConstants":false,
-  // "intelephense.diagnostics.undefinedProperties":false,
-  // "intelephense.diagnostics.undefinedVariables":false,
-  // "intelephense.diagnostics.undefinedMethods":false,
-  "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Rosé Pine Moon (no italics)",
-  "editor.lineHeight": 2.2,
-  "workbench.tree.indent": 15, 
-  "editor.fontLigatures": "'calt', 'ss01', 'ss20', 'ss19', 'ss03', 'ss02'", 
-  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-  "terminal.integrated.fontSize": 15,
-  "editor.fontFamily": "Hack Nerd Font Mono", // -> 
-  "window.title": "${activeEditorShort}${separator}${rootPath}/${activeEditorMedium} ${dirty} ",
-  "editor.tokenColorCustomizations": {
-      "textMateRules": [  
-          {
-              "scope": [
-                  //following will be in italic
-                  "comment",
-                  "keyword.control.import.js", // import
-                  "keyword.control.export.js", // export
-                  "keyword.control.from.js", // from
-                  // "constant", // String, Number, Boolean…, this, super
-                  "storage.modifier", // static keyword
-                  "storage.type.class", // class keyword
-                  "storage.type.php", // typehints in methods keyword
-                  "keyword.other.new.php", // new
-                  "entity.other.attribute-name", // html attributes
-                  "fenced_code.block.language.markdown" // markdown lang
-              ],
-              "settings": {
-                  "fontStyle": "italic"
-              }
-          },
-          {
-              "scope": [
-                  // the following elements will be displayed in bold
-                  "entity.name.type.class", // class names
-                  "entity.name.type.interface", // interface names
-                  "entity.name.type.trait", // trait names
-                  "entity.name.section.markdown", // markdown headlines
-              ],
-              "settings": {
-                  "fontStyle": "italic bold"
-              }
-          },
-          {
-              "scope": [
-                  // the following elements will be excluded from italics 
-                  //   (VSCode has some defaults for italics)
-                  "invalid",
-                  "keyword.operator",
-                  "constant.numeric.css",
-                  "keyword.other.unit.px.css",
-                  "constant.numeric.decimal.js",
-                  "constant.numeric.json",
-                  "comment.block",
-                  "entity.other.attribute-name.class.css"
-              ],
-              "settings": {
-                  "fontStyle": ""
-              }
-          }
-      ]
-  },
-  "editor.fontWeight": 300,
-  "editor.fontSize": 16.5, //17
-  "scss.validate": false,
-  "editor.cursorBlinking": "expand",
-  "editor.renderWhitespace": "all",
-  "workbench.colorCustomizations": {
-      "editorWhitespace.foreground": "#FFFFFF00",
-      "better-comments.multilineComments": true,
-      "better-comments.highlightPlainText": false,
-      "phpParameterHint.hintForeground": "#fff"
-  },
-  "workbench.editor.enablePreview": true,
-  "terminal.integrated.cursorStyle": "line",
-  "editor.tabSize":2,
-  "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-  },
-  "editor.rulers": [
-      150
-  ],
-  "gitlens.advanced.messages": {
-      "suppressGitMissingWarning": true
-  },
-  
-  // ------------- :Rust settings ------------------------
-  "[rust]": {
-      "editor.defaultFormatter": "rust-lang.rust-analyzer", // Makes the magic
-      "editor.formatOnSave": true, // Optional,
-      "editor.rulers": [
-          120,        
-          140
-      ]
-  },
-  // :----------- end Rust settings ---------------------
-
-  "black-formatter.args": [
-      "--line-length=140"
-  ],
-
-  // ---------- :Python settings ------------------------
-  "[python]": {
-      "editor.defaultFormatter": "ms-python.black-formatter", // Makes the magic
-      "editor.formatOnSave": true, // Optional,
-      "editor.indentSize": 4,
-      "editor.tabSize": 4,
-      "editor.rulers": [
-          120,        
-          140
-      ],
-      "editor.formatOnType": true
-  },
-  // :end python settings --------------------
-
-  // Php settings | Laravel ------------------------
-  "[php]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
-  "phpfmt.psr2": false,
-  "phpfmt.php_bin": "php",
-  "phpfmt.exclude": [
-      "AllmanStyleBraces",
-      "AlignPHPCode"
-  ],
-  "phpfmt.passes": [
-      "PSR2CurlyOpenNextLine",
-      "ReindentSwitchBlocks",
-      "AlignDoubleArrow",
-      "AlignPHPCode"
-  ],
-  "phpfmt.indent_with_space": 4,
-  "bladeFormatter.format.indentSize": 2,
- 
-  "blade.format.enable": true,
-  "css.validate": false,
-  "[json]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "terminal.integrated.gpuAcceleration": "off",
-  // "[blade]": {
-  //     "editor.defaultFormatter": "onecentlin.laravel-blade"
-  // },
-  "workbench.editorAssociations": {
-      "*.eot": "default"
-  },
-  "files.associations": {
-      "*.extensao": "bmewburn.vscode-intelephense-client"
-  },
-  "[scss]": {
-      "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-  },
-  "github.copilot.enable": {
-      "*": true,
-      "plaintext": false,
-      "markdown": true,
-      "scminput": false,
-      "yaml": false,
-      "php": true,
-      "blade": true
-  },
-  "[dockercompose]": {
-      "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.wordWrapColumn": 200,
-  "errorLens.excludeBySource": [
-      "intelephense(1014)"
-  ],
-  "php.suggest.basic": false,
-  "editor.quickSuggestions": {
-      "comments": "on",
-      "strings": "on"
-  },
-  "workbench.quickOpen.closeOnFocusLost": false,
-  "editor.dragAndDrop": false,
-  "emmet.triggerExpansionOnTab": true, // enable tab to expanse emmet tags
-  "[blade]": {
-      "editor.autoClosingBrackets": "always",
-      "editor.defaultFormatter": "shufo.vscode-blade-formatter"
-  },
-  "phpParameterHint.showDollarSign": false,
-  "gitlens.gitCommands.skipConfirmations": [
-      "fetch:command",
-      "switch:command",
-      "stash-push:command"
-  ],
-  "explorer.confirmDragAndDrop": false,
-  "workbench.editor.empty.hint": "hidden",
-  "workbench.productIconTheme": "fluent-icons",
-  "security.workspace.trust.untrustedFiles": "open",
-  "terminal.external.linuxExec": "xtermC:\\Program Files\\Git\\git-bash.exe",
-  "terminal.external.windowsExec": "C:\\Windows\\System32\\bash.exe",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
-  "editor.largeFileOptimizations": false,
-
-  // ------------- Visual Studio Code Settings Sync-------------
-  "editor.colorDecorators": false,
-  "editor.bracketPairColorization.enabled": false,
-  "workbench.editor.showTabs": "none",
-  "editor.minimap.enabled": false,
-  "editor.lineNumbers": "interval",
-  "window.titleBarStyle": "custom",
-  "window.customMenuBarAltFocus": false,
-  "editor.renderControlCharacters": false,
-  "editor.renderLineHighlight": "gutter",
-  "window.menuBarVisibility": "hidden",
-  "workbench.activityBar.location": "hidden",
-  "workbench.editor.labelFormat": "short",
-  "explorer.compactFolders": false,
-  "workbench.statusBar.visible": true,
-  "window.commandCenter": false,
-  "editor.renderLineHighlightOnlyWhenFocus": true,
-  "editor.guides.highlightActiveBracketPair": false,
-  // "editor.guides.bracketPairs": true,
-  // "editor.guides.indentation": true,
-
-  "workbench.layoutControl.enabled": false,
-  "apc.electron": {
-      "titleBarStyle":"hidden",
-  },
-  "apc.header": {
-      "height": 25   
-  },
-  "apc.listRow": {
-      "lists": [
-          "explorer-folders-view",
-      ],
-      "height": 28,
-  },
-  "apc.parts.font.family": {
-      // "sidebar": "Hack",
-      "titlebar": "Hack Nerd Font Mono",
-      // "statusbar": "Hack Nerd Font Mono",
+    // "php.executablePath": "php",
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Rosé Pine Moon (no italics)",
+    "editor.lineHeight": 2.2,
+    "workbench.tree.indent": 15,
+    "editor.fontLigatures": "'calt', 'ss01', 'ss20', 'ss19', 'ss03', 'ss02'",
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.fontSize": 15,
+    "editor.fontFamily": "Dank Mono", // default: Dank Mono
+    "window.title": "${activeEditorShort}${separator}${rootPath}/${activeEditorMedium} ${dirty}",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "variable.language.this.php",
+                    "variable.language.self.php",
+                    "variable.language.parent.php",
+                    "variable.language.static.php",
+                    "entity.other.attribute-name",
+                    "fenced_code.block.language.markdown"
+                ],
+                "settings": {
+                    "fontStyle": "italic bold"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "storage.type.interface",
+                    "storage.type.trait",
+                    "storage.type.php",
+                    "keyword.control.import.js",
+                    "keyword.control.export.js",
+                    "keyword.control.from.js"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type.class",
+                    "entity.name.type.interface",
+                    "entity.name.type.trait",
+                    "entity.name.section.markdown",
+                    "constant"
+                ],
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "invalid",
+                    "keyword.operator",
+                    "constant.numeric.css",
+                    "keyword.other.unit.px.css",
+                    "constant.numeric.decimal.js",
+                    "constant.numeric.json",
+                    "comment.block",
+                    "entity.other.attribute-name.class.css"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": [
+                    "variable.parameter.rust"
+                ],
+                "settings": {
+                    "fontStyle": "italic bold"
+                }
+            }
+        ]
     },
-  "apc.stylesheet": {
-      ".title-label > h2": "display: none",
-      ".editor-actions": "display: none",
-      ".pane-body": "padding: 8px",
-      ".pane-header": "padding: 0 8px",
-      ".split-view-view:fisrt-child .pane-header": "display: none !important;",
-      ".monaco-list-row": "border-radius: 4px",
-      ".nodidebar .inline-tabs-placeholder": "width: 75px",
-      ".window-appicon": "visibility: hidden;",
-      ".titlebar-left::before": "content: '࿋'; margin-left: 15px; margin-top: 2px; font-size: 0.9rem; color:red; font-weight: bold;",
-  },
-  "explorer.sortOrder": "foldersNestsFiles",
-  "explorer.fileNesting.patterns": {
-    "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*",
-    "tailwind.config.js": "tailwind.config*, postcss.config*",
-    ".env.local": ".env*",
-    ".env": ".env*"
-  },
-  "explorer.fileNesting.enabled": true,
-  "window.density.editorTabHeight": "compact",
-  "symbols.hidesExplorerArrows": false,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.iconTheme": "a-file-icon-vscode",
-  "diffEditor.ignoreTrimWhitespace": true,
-  "[nginx]": {
-      "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
-  },
+    "editor.fontWeight": 600,
+    "editor.fontSize": 17.2,
+    "scss.validate": false,
+    "editor.cursorBlinking": "expand",
+    "editor.renderWhitespace": "all",
+    "workbench.colorCustomizations": {
+        "editorWhitespace.foreground": "#FFFFFF00",
+        "better-comments.multilineComments": true,
+        "better-comments.highlightPlainText": false,
+        "phpParameterHint.hintForeground": "#fff"
+    },
+    "workbench.editor.enablePreview": true,
+    "terminal.integrated.cursorStyle": "line",
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        150
+    ],
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true
+    },
+    "[rust]": {
+        "editor.semanticHighlighting.enabled": false,
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+            120,
+            140
+        ]
+    },
+    "black-formatter.args": [
+        "--line-length=140"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.indentSize": 4,
+        "editor.tabSize": 4,
+        "editor.rulers": [
+            120,
+            140
+        ],
+        "editor.formatOnType": true
+    },
+
+    // Error Lens --------------------------------------------------------------
+    // [https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens]
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+        "info",
+        "hint"
+    ],
+    // End Error Lens -----------------------------------------------------------
+
+    // Php Config ---------------------------------------------------------------
+    // https://github.com/bmewburn/intelephense-docs 
+    "[php]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt"        
+    },
+    "phpstan.enabled": false,
+    "intelephense.codeLens.usages.enable": true,
+    "intelephense.codeLens.overrides.enable": true,
+    "intelephense.codeLens.parent.enable": true,
+    "intelephense.diagnostics.enable": true,
+
+    "phpfmt.psr2": false,
+    "phpfmt.php_bin": "php",
+    "phpfmt.exclude": [
+        "AllmanStyleBraces",
+        "AlignPHPCode"
+    ],
+    "phpfmt.passes": [
+        "PSR2CurlyOpenNextLine",
+        "ReindentSwitchBlocks",
+        "AlignDoubleArrow",
+        "AlignPHPCode"
+    ],
+    "phpfmt.indent_with_space": 4,
+    "bladeFormatter.format.indentSize": 2,
+    "blade.format.enable": true,
+    // End Php Config -----------------------------------------------------------
+
+    "css.validate": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "terminal.integrated.gpuAcceleration": "off",
+    "workbench.editorAssociations": {
+        "*.eot": "default"
+    },
+    "files.associations": {
+        "*.extensao": "bmewburn.vscode-intelephense-client",
+        "*.neon": "neon"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.wordWrapColumn": 200,
+    // "errorLens.excludeBySource": [
+    //     "intelephense(1014)"
+    // ],
+    "php.suggest.basic": false,
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    },
+    "workbench.quickOpen.closeOnFocusLost": false,
+    "editor.dragAndDrop": false,
+    "emmet.triggerExpansionOnTab": true,
+    "[blade]": {
+        "editor.autoClosingBrackets": "always",
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    },
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "switch:command",
+        "stash-push:command"
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.productIconTheme": "fluent-icons",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.external.linuxExec": "xtermC:\\Program Files\\Git\\git-bash.exe",
+    "terminal.external.windowsExec": "C:\\Windows\\System32\\bash.exe",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "editor.largeFileOptimizations": false,
+    "editor.colorDecorators": false,
+    "editor.bracketPairColorization.enabled": false,
+    "workbench.editor.showTabs": "none",
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "interval",
+    "window.titleBarStyle": "custom",
+    "editor.renderControlCharacters": false,
+    "editor.renderLineHighlight": "gutter",
+    // "workbench.activityBar.location": "hidden",
+    "workbench.editor.labelFormat": "short",
+    "explorer.compactFolders": false,
+    "workbench.statusBar.visible": true,
+    "window.commandCenter": false,
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "editor.guides.highlightActiveBracketPair": false,
+    "explorer.sortOrder": "foldersNestsFiles",
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "composer.json": "composer.lock",
+        "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*, .prettier*, .stylelint*, package-lock.json",
+        "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
+        "*.dart": "${capture}.g.dart",
+        "Cargo.toml": "Cargo.lock",
+        "tailwind.config.js": "tailwind.config*, postcss.config*",
+        ".env.local": ".env*",
+        ".env": ".env*",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "explorer.fileNesting.enabled": true,
+    "window.density.editorTabHeight": "compact",
+    "symbols.hidesExplorerArrows": false,
+    "workbench.iconTheme": "symbols",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "[nginx]": {
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    },
+    "gitlens.graph.minimap.enabled": false,
+    "surround.custom": {
+        "bladeif": {
+            "label": "Blade If",
+            "description": "Blade If",
+            "languageIds": [
+                "blade"
+            ],
+            "snippet": "@if (${1:condition})\n\t$TM_SELECTED_TEXT$0\n@endif"
+        },
+        "bladeforeach": {
+            "label": "Blade Foreach",
+            "description": "Blade Foreach",
+            "languageIds": [
+                "blade"
+            ],
+            "snippet": "@foreach ($1 as $2)\n\t$TM_SELECTED_TEXT$0\n@endforeach"
+        }
+    },
+    "http.proxySupport": "off",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.guides.indentation": false,
+    "Devdb.colorTheme": "dark",
+    "Devdb.showFewerUpdateNotificationActions": true,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "scminput",
+        "yaml"
+    ],
+    "npm.packageManager": "auto",
+
+    // vscode pets
+    "vscode-pets.theme": "castle",
+    "cursor.composer.shouldAllowCustomModes": true,
+    "cursor.diffs.useCharacterLevelDiffs": true,
+    "git.autofetch": true,
+    "update.releaseTrack": "prerelease",
+    "kotlin.languageServer.enabled": false,
+    "kotlin.debugAdapter.enabled": false,
+    "gitflow.views.feature.showRemoteBranches": true,
+    "cursor.cpp.enablePartialAccepts": true,
+    "files.trimTrailingWhitespace": false,
+    "laravel-pint.enable": true
 }
